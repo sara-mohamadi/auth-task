@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+
+    .input {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      text-align: left;
+      transition: border-color 0.3s;
+
+      &::placeholder {
+        text-align: right;
+        direction: rtl;
+      }
+
+      &:focus {
+        border-color: #0070f3;
+        outline: none;
+      }
+    }
+
+    .inputError {
+      border-color: red;
+    }
+
+    .errorMessage {
+      color: red;
+      margin-bottom: 1rem;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .button {
+      padding: 0.5rem;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover:not(:disabled) {
+        background-color: #005bb5;
+      }
+
+      &:disabled {
+        background-color: #aaa;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
